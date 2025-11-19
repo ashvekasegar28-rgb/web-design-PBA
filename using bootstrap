@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3 Page Website (Bootstrap + jQuery)</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<style>
+/* Page sections */
+.page {
+    display: none;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+.page.active {
+    display: block;
+}
+
+/* Rounded images */
+.round-img {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Smooth fade animation */
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active nav-btn" data-page="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-btn" data-page="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-btn" data-page="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active fade container">
+    <div class="card shadow p-4">
+        <h1 class="text-center mb-3">Welcome to Our Website</h1>
+        <p class="lead">
+            This website is built using Bootstrap and jQuery in a single HTML file.
+            Navigation happens instantly with smooth fade animations.
+        </p>
+        <p>
+            Explore the About page to learn more about us or visit the Contact page
+            to reach out.
+        </p>
+        <div class="text-center">
+            <img src="https://picsum.photos/400" class="round-img mt-3">
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page fade container">
+    <div class="card shadow p-4">
+        <h1 class="text-center mb-3">About Us</h1>
+        <p class="lead">
+            We are creators passionate about building clean, elegant, and responsive web
+            interfaces using modern tools like Bootstrap and jQuery.
+        </p>
+        <p>
+            This template shows how a full multi-page experience can exist in a single HTML
+            file with zero page reloads.
+        </p>
+        <div class="text-center">
+            <img src="https://picsum.photos/500" class="round-img mt-3">
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page fade container">
+    <div class="card shadow p-4">
+        <h1 class="text-center mb-3">Contact Us</h1>
+        <p class="lead">
+            We would love to hear from you. Use the information below to reach out.
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item">📧 Email: contact@example.com</li>
+            <li class="list-group-item">📞 Phone: +123 456 7890</li>
+            <li class="list-group-item">📍 Location: Worldwide</li>
+        </ul>
+    </div>
+</div>
+
+<!-- jQuery PAGE SWITCHING -->
+<script>
+$(".nav-btn").click(function() {
+    let page = $(this).data("page");
+
+    // update active nav link
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+
+    // hide all pages
+    $(".page").removeClass("active").hide();
+
+    // show selected page
+    $("#" + page).fadeIn(300).addClass("active");
+});
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
