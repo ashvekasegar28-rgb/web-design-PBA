@@ -1,0 +1,7 @@
+$(document).ready(function () {
+    $("#video-background").html(`
+        <video autoplay muted loop>
+            <source src="your-video.mp4" type="video/mp4">
+        </video>
+    `);
+});
