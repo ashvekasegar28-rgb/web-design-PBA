@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://png.pngtree.com/thumb_back/fh260/background/20241224/pngtree-a-fully-equipped-gym-with-dumbbells-weight-machines-and-cardio-equipment-image_16843660.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.ui-page {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.header-title {
+  font-weight: bold;
+  color: #ffd166;
+  text-shadow: 0 0 8px #ff9f1c;
+}
+
+h3, h4 {
+  color: #ffe066;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+p, li, strong {
+  color: #fff !important;
+}
+
+/* Buttons */
+.ui-btn-b {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  color: white !important;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.ui-btn-b:hover {
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+}
+
+/* Dark info box for Home */
+.info-box {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #ff8a8a;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+/* Service cards */
+.service-card {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #ff8585;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 120, 120, 0.5);
+}
+
+.price {
+  color: #ff9999;
+  font-weight: bold;
+}
+
+iframe {
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+.ui-footer .ui-navbar a {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.gym-info-list li {
+  background: linear-gradient(135deg, #222, #333);
+  color: #fff;
+  border: 1px solid #ff6b6b;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+.gym-info-list li strong {
+  color: #ffb6b6;
+  font-size: 1.1em;
+}
