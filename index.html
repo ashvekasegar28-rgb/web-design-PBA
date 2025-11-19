@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartFit Wellness Centre</title>
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <div data-role="header" data-theme="b">
+      <h1 class="header-title">SmartFit Wellness Centre</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <h3>Welcome to SmartFit!</h3>
+      <p>Your local destination for health, fitness, and rejuvenation. Explore our services and get in touch today!</p>
+
+      <div class="info-box">
+        <h3>🏋️ About Our Gym</h3>
+        <p>SmartFit Wellness Centre offers a modern, fully equipped gym with top-tier fitness machines, free weights, and cardio zones. 
+        Our certified trainers are dedicated to guiding you through personalized workout plans designed to meet your fitness goals.</p>
+
+        <ul data-role="listview" data-inset="true" class="gym-info-list" style="background:rgba(25,25,25,0.9); border-radius:10px;">
+          <li><strong>🕒 Opening Hours:</strong><br> Monday–Friday: 6AM – 10PM<br> Saturday–Sunday: 8AM – 8PM</li>
+          <li><strong>🤝 Trainers:</strong><br> Professional and friendly instructors available for personal training.</li>
+          <li><strong>📍 Location:</strong><br> SmartFit Wellness Centre, Jalan Damai, Kuala Lumpur.</li>
+        </ul>
+      </div>
+
+      <a href="#services" class="ui-btn ui-corner-all ui-shadow ui-icon-grid ui-btn-icon-left ui-btn-b">View Services</a>
+      <a href="#contact" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left ui-btn-b">Contact Us</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+          <li><a href="#services" data-icon="grid">Services</a></li>
+          <li><a href="#contact" data-icon="phone">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Page -->
+  <div data-role="page" id="services">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="arrow-l">Back</a>
+      <h1>Our Services</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <div class="service-card">
+        <h3>Personal Training</h3>
+        <p>One-on-one fitness sessions with certified trainers.</p>
+        <p class="price">RM 500 / 12 sessions</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Yoga & Meditation</h3>
+        <p>Relax your mind and body with our guided yoga classes.</p>
+        <p class="price">RM 80 / class</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Massage Therapy</h3>
+        <p>Rejuvenate with our professional massage sessions.</p>
+        <p class="price">RM 120 / hour</p>
+      </div>
+      
+      <div class="service-card">
+        <h3>Small Group Training</h3>
+        <p>Workout in a small, friendly group led by a certified trainer.</p>
+        <p class="price">RM 350 / 12 sessions</p>
+      </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home</a></li>
+          <li><a href="#services" data-icon="grid" class="ui-btn-active">Services</a></li>
+          <li><a href="#contact" data-icon="phone">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page -->
+  <div data-role="page" id="contact">
+    <div data-role="header" data-theme="b">
+      <a href="#home" data-icon="arrow-l">Back</a>
+      <h1>Contact Us</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <p>We’d love to hear from you!</p>
+      <a href="tel:+60123456789" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left ui-btn-b">Call Us</a>
+      <a href="mailto:info@smartfit.com" class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left ui-btn-b">Email Us</a>
+
+      <div style="margin-top:20px;">
+        <h4>Find Us Here:</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0835749613163!2d101.6869!3d3.139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362b7f0e5eaf%3A0x2e43bdbb54e1b6e3!2sKuala%20Lumpur%20Wellness%20Centre!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy"
+          width="100%"
+          height="200"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home</a></li>
+          <li><a href="#services" data-icon="grid">Services</a></li>
+          <li><a href="#contact" data-icon="phone" class="ui-btn-active">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
