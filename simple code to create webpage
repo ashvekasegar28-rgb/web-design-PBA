@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3 Page Website (No Video)</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
+    width: 100%;
+    padding: 15px 25px;
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+nav a.active {
+    text-decoration: underline;
+}
+
+/* PAGE SECTIONS */
+.page {
+    display: none;
+    padding: 120px 30px 40px;
+    text-align: center;
+}
+.page.active {
+    display: block;
+}
+
+/* CONTENT BOX */
+.box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* TITLES */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* IMAGES */
+.round-img {
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+/* ANIMATIONS */
+.fade-in { opacity: 0; animation: fade 1s forwards; }
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .round-img {
+        width: 90%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a class="nav-link active" onclick="showPage('home')">Home</a>
+    <a class="nav-link" onclick="showPage('about')">About</a>
+    <a class="nav-link" onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+    <div class="box fade-in">
+        <h1>Welcome to Our Website</h1>
+        <p class="fade-in delay-1">
+            This is a modern, simple 3-page website built with HTML, CSS, and JavaScript.
+            The layout is clean, fast, and responsive on all devices. Enjoy smooth page 
+            switching and beautiful animations with no page reloads.
+        </p>
+        <p class="fade-in delay-2">
+            Explore the About section to learn more about us or visit the Contact page
+            if you want to get in touch.
+        </p>
+        <img src="https://picsum.photos/400" class="round-img fade-in delay-2">
+    </div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+    <div class="box fade-in">
+        <h1>About Us</h1>
+        <p class="fade-in delay-1">
+            We are passionate creators dedicated to building clean and visually appealing
+            websites. Our mission is to design online experiences that look great and feel
+            intuitive to use.
+        </p>
+        <p class="fade-in delay-2">
+            This example demonstrates a simple multi-page website combined into one file,
+            using JavaScript to switch between pages instantly. It can be expanded into a
+            business website, portfolio, personal profile, or anything you imagine.
+        </p>
+        <img src="https://picsum.photos/500" class="round-img fade-in delay-2">
+    </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="page">
+    <div class="box fade-in">
+        <h1>Contact Us</h1>
+        <p class="fade-in delay-1">
+            We'd love to hear from you! Whether you have questions, feedback, or want to
+            start a new project, feel free to reach out using any of the information below:
+        </p>
+        <p class="fade-in delay-2">📧 Email: contact@example.com</p>
+        <p class="fade-in delay-2">📞 Phone: +123 456 7890</p>
+        <p class="fade-in delay-2">📍 Location: Anywhere in the world</p>
+    </div>
+</section>
+
+<!-- JAVASCRIPT FOR PAGE SWITCHING -->
+<script>
+function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+    // Show selected page
+    document.getElementById(pageId).classList.add('active');
+
+    // Update nav active link
+    document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
